@@ -7,6 +7,6 @@ describe("App", () => {
   test("Should show Accordion", () => {
     render(<App></App>);
 
-    expect(screen.getByText(/Testing/i)).toBeDefined()
+    expect(screen.getByText(/InvesTools/i)).toBeDefined()
   })
 })
