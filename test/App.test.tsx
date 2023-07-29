@@ -4,9 +4,10 @@ import Accordion from '../src/Accordion';
 import App from "../src/App";
 
 describe("App", () => {
-  test("Should show Accordion", () => {
+  test("Should show Summary", () => {
     render(<App></App>);
 
     expect(screen.getByText(/InvesTools/i)).toBeDefined()
+    expect(screen.getByText(/Percent/i)).toBeDefined()
   })
 })

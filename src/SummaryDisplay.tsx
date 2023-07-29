@@ -1,9 +1,9 @@
 type SummaryDisplayProps = {
-  data: [{
+  data: {
     name: string;
     amount: number;
     percent: number;
-  }]
+  }[];
 }
 
 export const SummaryDisplay = (props: SummaryDisplayProps) => {
