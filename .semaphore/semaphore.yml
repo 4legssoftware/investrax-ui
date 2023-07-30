@@ -1,0 +1,45 @@
+version: v1.0
+name: Investrax UI
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Static Checks
+    dependencies: [ ]
+    task:
+      prologue:
+          commands:
+            - checkout
+            - yarn install
+      jobs:
+        - name: Lint
+          commands:
+            - yarn lint
+        - name: Prettier
+          commands:
+            - yarn format:check
+
+  - name: Unit Tests
+    dependencies: [ ]
+    task:
+      prologue:
+          commands:
+            - checkout
+            - yarn install
+      jobs:
+        - name: Vitest
+          commands:
+            - yarn test:unit
+
+  - name: Build
+    dependencies: [ ]
+    task:
+      prologue:
+          commands:
+            - checkout
+            - yarn install
+      jobs:
+        - name: Build
+          commands:
+            - yarn build
