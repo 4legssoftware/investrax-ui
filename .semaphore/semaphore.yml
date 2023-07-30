@@ -6,12 +6,12 @@ agent:
     os_image: ubuntu1804
 blocks:
   - name: Static Checks
-    dependencies: [ ]
+    dependencies: []
     task:
       prologue:
-          commands:
-            - checkout
-            - yarn install
+        commands:
+          - checkout
+          - yarn install
       jobs:
         - name: Lint
           commands:
@@ -21,24 +21,24 @@ blocks:
             - yarn format:check
 
   - name: Unit Tests
-    dependencies: [ ]
+    dependencies: []
     task:
       prologue:
-          commands:
-            - checkout
-            - yarn install
+        commands:
+          - checkout
+          - yarn install
       jobs:
         - name: Vitest
           commands:
             - yarn test:unit
 
   - name: Build
-    dependencies: [ ]
+    dependencies: []
     task:
       prologue:
-          commands:
-            - checkout
-            - yarn install
+        commands:
+          - checkout
+          - yarn install
       jobs:
         - name: Build
           commands:
