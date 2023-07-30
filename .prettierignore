@@ -1,0 +1,11 @@
+/node_modules
+/dist
+
+cdk.*
+*.html
+cypress.env.json
+cypress.config.mjs
+
+.pnp.cjs
+.pnp.loader.mjs
+.yarn/*

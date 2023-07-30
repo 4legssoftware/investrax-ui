@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
+    "dev": "vite",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test:unit": "vitest",
@@ -27,6 +29,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
     "jsdom": "^22.1.0",
+    "prettier": "^3.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.0",
     "vitest": "^0.33.0"
