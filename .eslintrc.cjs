@@ -1,27 +1,39 @@
-/* eslint-env node */
-
 module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:react-hooks/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: true,
-    tsconfigRootDir: __dirname,
-  },
-  plugins: ['react-refresh'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   rules: {
-    'react-refresh/only-export-components': [
+    'no-extra-boolean-cast': 'off',
+    'no-prototype-builtins': 'off',
+    'max-lines': ['error', 150],
+    '@typescript-eslint/no-unused-vars': [
       'warn',
-      { allowConstantExport: true },
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+      },
     ],
-    '@typescript-eslint/no-non-null-assertion': 'off',
+
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        extendDefaults: true,
+        types: {
+          '{}': false,
+          'object': false,
+        },
+      },
+    ],
   },
-}
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  root: true,
+  ignorePatterns: ['**/*.feature'],
+  overrides: [
+    {
+      files: ['**/generated/*', '**/*.test.ts'],
+      rules: {
+        'max-lines': 'off',
+      },
+    },
+  ],
+};

@@ -1,0 +1,7 @@
+*.md
+*.lock
+jest.cdk.config.js
+*.png
+*.dot
+iac/*
+*.graphql
