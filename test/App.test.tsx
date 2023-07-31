@@ -7,7 +7,7 @@ describe(App, () => {
   it('renders the App title', () => {
     render(<App></App>);
 
-    expect(screen.getByText(/InvesTools/i)).toBeDefined();
+    expect(screen.getByText(/InvesTrax/i)).toBeDefined();
     expect(screen.getByText(/Percent/i)).toBeDefined();
   });
 

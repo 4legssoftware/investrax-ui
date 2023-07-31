@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div>
-      <h1>InvesTools</h1>
+      <h1>InvesTrax</h1>
       <button onClick={handleClick}>{isLoggedIn ? 'Logout' : 'Login'}</button>
       <SummaryDisplay data={data} />
     </div>
