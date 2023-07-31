@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import SummaryDisplay from '../src/SummaryDisplay';
 import '@testing-library/jest-dom/extend-expect';
@@ -17,6 +17,5 @@ describe('Summary Display', () => {
     const { getByText } = render(<SummaryDisplay data={data} />);
 
     expect(getByText('Stock')).toBeInTheDocument();
-    // expect(screen.getByText(/Stock/i)).toBeDefined();
   });
 });
