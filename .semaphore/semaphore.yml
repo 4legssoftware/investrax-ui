@@ -11,6 +11,8 @@ blocks:
       prologue:
         commands:
           - checkout
+          - nvm use
+          - node --version
           - yarn install
       jobs:
         - name: Lint
@@ -26,6 +28,7 @@ blocks:
       prologue:
         commands:
           - checkout
+          - nvm use
           - node --version
           - yarn install
       jobs:
@@ -39,6 +42,7 @@ blocks:
       prologue:
         commands:
           - checkout
+          - nvm use
           - node --version
           - yarn install
       jobs:
