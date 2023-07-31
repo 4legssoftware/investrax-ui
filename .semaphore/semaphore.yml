@@ -11,7 +11,7 @@ blocks:
       prologue:
         commands:
           - checkout
-          - nvm install && nvm use lts
+          - nvm install && nvm use
           - node --version
           - yarn install
       jobs:
@@ -28,7 +28,7 @@ blocks:
       prologue:
         commands:
           - checkout
-          - nvm use
+          - nvm install && nvm use
           - node --version
           - yarn install
       jobs:
@@ -42,7 +42,7 @@ blocks:
       prologue:
         commands:
           - checkout
-          - nvm use
+          - nvm install && nvm use
           - node --version
           - yarn install
       jobs:
