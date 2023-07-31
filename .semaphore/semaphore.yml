@@ -26,6 +26,7 @@ blocks:
       prologue:
         commands:
           - checkout
+          - node --version
           - yarn install
       jobs:
         - name: Vitest
@@ -38,6 +39,7 @@ blocks:
       prologue:
         commands:
           - checkout
+          - node --version
           - yarn install
       jobs:
         - name: Build
