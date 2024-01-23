@@ -16,6 +16,6 @@ describe('Summary Display', () => {
 
     const { getByText } = render(<SummaryDisplay data={data} />);
 
-    expect(getByText('Stock')).toBeInTheDocument();
+    expect(getByText('Stock')).toBeDefined();
   });
 });
